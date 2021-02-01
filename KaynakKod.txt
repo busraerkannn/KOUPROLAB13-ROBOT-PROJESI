@@ -17,16 +17,16 @@ import javax.swing.JFrame;
 public abstract class Robot {
     
     private int motorSayisi;
-    private int yükMiktari;
+    private int yÃ¼kMiktari;
     private String robotTipi;
     public Robot()
     {
         
     }
-    public Robot(int motorSayisi,int yükMiktari,String robotTipi)
+    public Robot(int motorSayisi,int yÃ¼kMiktari,String robotTipi)
     {
         this.motorSayisi=motorSayisi;
-        this.yükMiktari=yükMiktari;
+        this.yÃ¼kMiktari=yÃ¼kMiktari;
         this.robotTipi=robotTipi;
     }
 
@@ -45,17 +45,17 @@ public abstract class Robot {
     }
 
     /**
-     * @return the yükMiktari
+     * @return the yÃ¼kMiktari
      */
-    public int getYükMiktari() {
-        return yükMiktari;
+    public int getYÃ¼kMiktari() {
+        return yÃ¼kMiktari;
     }
 
     /**
-     * @param yükMiktari the yükMiktari to set
+     * @param yÃ¼kMiktari the yÃ¼kMiktari to set
      */
-    public void setYükMiktari(int yükMiktari) {
-        this.yükMiktari = yükMiktari;
+    public void setYÃ¼kMiktari(int yÃ¼kMiktari) {
+        this.yÃ¼kMiktari = yÃ¼kMiktari;
     }
 
     /**
@@ -88,9 +88,9 @@ public abstract class GezginRobot extends Robot{
     public GezginRobot() {
     }
         
-        public GezginRobot(int motorSayisi,int yükMiktari,String robotTipi,int hiz)
+        public GezginRobot(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int hiz)
         {
-            super(motorSayisi,yükMiktari,robotTipi);
+            super(motorSayisi,yÃ¼kMiktari,robotTipi);
             this.hiz=hiz;
         }
         public abstract double EngelGecmeSuresiBul();
@@ -117,35 +117,35 @@ public abstract class GezginRobot extends Robot{
  */
 
 
-public abstract class ManipülatorRobot extends Robot{
-    private int yükTasimaKapasitesi;
+public abstract class ManipÃ¼latorRobot extends Robot{
+    private int yÃ¼kTasimaKapasitesi;
     private int kolUzunlugu;
     private int tasimaHizi;
 
-    public ManipülatorRobot() {
+    public ManipÃ¼latorRobot() {
     }
     
-    public ManipülatorRobot(int motorSayisi,int yükMiktari,String robotTipi,int yükTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
+    public ManipÃ¼latorRobot(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int yÃ¼kTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
     {
-        super(motorSayisi,yükMiktari,robotTipi);
-        this.yükTasimaKapasitesi=yükTasimaKapasitesi;
+        super(motorSayisi,yÃ¼kMiktari,robotTipi);
+        this.yÃ¼kTasimaKapasitesi=yÃ¼kTasimaKapasitesi;
         this.kolUzunlugu=kolUzunlugu;
         this.tasimaHizi=tasimaHizi;
         
     }
 
     /**
-     * @return the yükTasimaKapasitesi
+     * @return the yÃ¼kTasimaKapasitesi
      */
-    public int getYükTasimaKapasitesi() {
-        return yükTasimaKapasitesi;
+    public int getYÃ¼kTasimaKapasitesi() {
+        return yÃ¼kTasimaKapasitesi;
     }
 
     /**
-     * @param yükTasimaKapasitesi the yükTasimaKapasitesi to set
+     * @param yÃ¼kTasimaKapasitesi the yÃ¼kTasimaKapasitesi to set
      */
-    public void setYükTasimaKapasitesi(int yükTasimaKapasitesi) {
-        this.yükTasimaKapasitesi = yükTasimaKapasitesi;
+    public void setYÃ¼kTasimaKapasitesi(int yÃ¼kTasimaKapasitesi) {
+        this.yÃ¼kTasimaKapasitesi = yÃ¼kTasimaKapasitesi;
     }
 
     /**
@@ -186,19 +186,19 @@ public abstract class ManipülatorRobot extends Robot{
 
 
 public class Hibrit extends GezginRobot {
-    private int yükTasimaKapasitesi;
+    private int yÃ¼kTasimaKapasitesi;
     private int kolUzunlugu;
     private int tasimaHizi;
 
     public Hibrit() {
     }
     
-    public Hibrit(int motorSayisi,int yükMiktari,String robotTipi,int yükTasimaKapasitesi,int kolUzunlugu,int tasimaHizi,int hiz)
+    public Hibrit(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int yÃ¼kTasimaKapasitesi,int kolUzunlugu,int tasimaHizi,int hiz)
     {
-        super(motorSayisi,yükMiktari,robotTipi,hiz);
+        super(motorSayisi,yÃ¼kMiktari,robotTipi,hiz);
         this.kolUzunlugu=kolUzunlugu;
         this.tasimaHizi=tasimaHizi;
-        this.yükTasimaKapasitesi=yükTasimaKapasitesi;
+        this.yÃ¼kTasimaKapasitesi=yÃ¼kTasimaKapasitesi;
     }
     
     public double EngelGecmeSuresiBul()
@@ -215,17 +215,17 @@ public class Hibrit extends GezginRobot {
     }
 
     /**
-     * @return the yükTasimaKapasitesi
+     * @return the yÃ¼kTasimaKapasitesi
      */
-    public int getYükTasimaKapasitesi() {
-        return yükTasimaKapasitesi;
+    public int getYÃ¼kTasimaKapasitesi() {
+        return yÃ¼kTasimaKapasitesi;
     }
 
     /**
-     * @param yükTasimaKapasitesi the yükTasimaKapasitesi to set
+     * @param yÃ¼kTasimaKapasitesi the yÃ¼kTasimaKapasitesi to set
      */
-    public void setYükTasimaKapasitesi(int yükTasimaKapasitesi) {
-        this.yükTasimaKapasitesi = yükTasimaKapasitesi;
+    public void setYÃ¼kTasimaKapasitesi(int yÃ¼kTasimaKapasitesi) {
+        this.yÃ¼kTasimaKapasitesi = yÃ¼kTasimaKapasitesi;
     }
 
     /**
@@ -269,9 +269,9 @@ public class Tekerlekli extends GezginRobot{
 
     public Tekerlekli() {
     }
-     public Tekerlekli(int motorSayisi,int yükMiktari,String robotTipi,int hiz,int tekerlekSayisi)
+     public Tekerlekli(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int hiz,int tekerlekSayisi)
         {
-            super(motorSayisi,yükMiktari,robotTipi,hiz);
+            super(motorSayisi,yÃ¼kMiktari,robotTipi,hiz);
             this.tekerlekSayisi=tekerlekSayisi;
         }
      public double EngelGecmeSuresiBul()
@@ -309,9 +309,9 @@ public class Paletli extends GezginRobot{
     public Paletli() {
     }
     
-    public Paletli(int motorSayisi,int yükMiktari,String robotTipi,int hiz,int paletSayisi)
+    public Paletli(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int hiz,int paletSayisi)
         {
-            super(motorSayisi,yükMiktari,robotTipi,hiz);
+            super(motorSayisi,yÃ¼kMiktari,robotTipi,hiz);
             this.paletSayisi=paletSayisi;
         }
     public double EngelGecmeSuresiBul()
@@ -349,9 +349,9 @@ public class Spider extends GezginRobot {
     public Spider() {
     }
     
-    public Spider(int motorSayisi,int yükMiktari,String robotTipi,int hiz,int bacakSayisi)
+    public Spider(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int hiz,int bacakSayisi)
         {
-            super(motorSayisi,yükMiktari,robotTipi,hiz);
+            super(motorSayisi,yÃ¼kMiktari,robotTipi,hiz);
             this.bacakSayisi=bacakSayisi;
         }
     public double EngelGecmeSuresiBul()
@@ -382,15 +382,15 @@ public class Spider extends GezginRobot {
  * and open the template in the editor.
  */
 
-public class Seri extends ManipülatorRobot {
+public class Seri extends ManipÃ¼latorRobot {
 
     public Seri() {
     }
     
     
-    public Seri(int motorSayisi,int yükMiktari,String robotTipi,int yükTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
+    public Seri(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int yÃ¼kTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
     {
-        super(motorSayisi,yükMiktari,robotTipi,yükTasimaKapasitesi,kolUzunlugu,tasimaHizi);
+        super(motorSayisi,yÃ¼kMiktari,robotTipi,yÃ¼kTasimaKapasitesi,kolUzunlugu,tasimaHizi);
     }
 }
 
@@ -400,14 +400,14 @@ public class Seri extends ManipülatorRobot {
  * and open the template in the editor.
  */
 
-public class Paralel extends ManipülatorRobot {
+public class Paralel extends ManipÃ¼latorRobot {
 
     public Paralel() {
     }
     
-    public Paralel(int motorSayisi,int yükMiktari,String robotTipi,int yükTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
+    public Paralel(int motorSayisi,int yÃ¼kMiktari,String robotTipi,int yÃ¼kTasimaKapasitesi,int kolUzunlugu,int tasimaHizi)
     {
-        super(motorSayisi,yükMiktari,robotTipi,yükTasimaKapasitesi,kolUzunlugu,tasimaHizi);
+        super(motorSayisi,yÃ¼kMiktari,robotTipi,yÃ¼kTasimaKapasitesi,kolUzunlugu,tasimaHizi);
     }
 }
 
@@ -431,11 +431,11 @@ public class Proje extends JFrame implements ActionListener{
     String yonBilgisi3=new String();
     ArrayList <Integer> list=new ArrayList <Integer>();
      ArrayList <Integer> list1=new ArrayList <Integer>();
-    ManipülatorRobot r2;
+    ManipÃ¼latorRobot r2;
     GezginRobot r1;
     Hibrit r3;
 
-    public Proje(int x,int y,String robotTipi,ArrayList<String> yonBilgisi,ManipülatorRobot r1){
+    public Proje(int x,int y,String robotTipi,ArrayList<String> yonBilgisi,ManipÃ¼latorRobot r1){
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800,1000);
@@ -584,9 +584,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.drawString("Son Konum",toplamX,oncekiKonumY);
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                         devam=false;
                        
                     }
@@ -618,9 +618,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     
                     }
                     else if(devam==true)
@@ -651,9 +651,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -684,9 +684,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -713,7 +713,7 @@ public class Proje extends JFrame implements ActionListener{
                     g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY);
                     double sn=(double)r2.getTasimaHizi()/yerDegistirme;
-                    System.out.println("Geçen süre:"+sn+" saniye");
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 
             }
@@ -790,9 +790,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     if(devam)
                     {
@@ -822,9 +822,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     if(devam)
                     {
@@ -854,9 +854,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     if(devam)
                     {
@@ -887,9 +887,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yon+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yon+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         double sn=(double)r2.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     if(devam)
                     {
@@ -915,7 +915,7 @@ public class Proje extends JFrame implements ActionListener{
                     g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY);
                     double sn=(double)r2.getTasimaHizi()/yerDegistirme;
-                    System.out.println("Geçen süre:"+sn+" saniye");
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             
@@ -1005,8 +1005,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX+5,oncekiKonumY+15,toplamX+5,oncekiKonumY+20);
                             g.drawLine(toplamX+10,oncekiKonumY+15,toplamX+10,oncekiKonumY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1055,8 +1055,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX+5,oncekiKonumY+15,toplamX+5,oncekiKonumY+20);
                             g.drawLine(toplamX+10,oncekiKonumY+15,toplamX+10,oncekiKonumY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1104,8 +1104,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX+5,toplamY+15,oncekiKonumX+5,toplamY+20);
                             g.drawLine(oncekiKonumX+10,toplamY+15,oncekiKonumX+10,toplamY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1152,8 +1152,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX+5,toplamY+15,oncekiKonumX+5,toplamY+20);
                             g.drawLine(oncekiKonumX+10,toplamY+15,oncekiKonumX+10,toplamY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1192,7 +1192,7 @@ public class Proje extends JFrame implements ActionListener{
                     g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY-10);
                     double sn=((double)r1.getHiz()/yerDegistirme)+engelSure;
-                    System.out.println("Geçen süre:"+sn+" saniye");
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 
             }
@@ -1284,8 +1284,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX+5,oncekiKonumY+15,toplamX+5,oncekiKonumY+20);
                             g.drawLine(toplamX+10,oncekiKonumY+15,toplamX+10,oncekiKonumY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1333,8 +1333,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX+5,oncekiKonumY+15,toplamX+5,oncekiKonumY+20);
                             g.drawLine(toplamX+10,oncekiKonumY+15,toplamX+10,oncekiKonumY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1381,8 +1381,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX+5,toplamY+15,oncekiKonumX+5,toplamY+20);
                             g.drawLine(oncekiKonumX+10,toplamY+15,oncekiKonumX+10,toplamY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1429,8 +1429,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX+5,toplamY+15,oncekiKonumX+5,toplamY+20);
                             g.drawLine(oncekiKonumX+10,toplamY+15,oncekiKonumX+10,toplamY+20);
                             double sn=((double)r1.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1468,7 +1468,7 @@ public class Proje extends JFrame implements ActionListener{
                     g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY-10);
                     double sn=((double)r1.getHiz()/yerDegistirme)+engelSure;
-                    System.out.println("Geçen süre:"+sn+" saniye");
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 
             }
@@ -1561,9 +1561,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             double sn=((double)r1.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.orange);
@@ -1612,9 +1612,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             double sn=((double)r1.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.orange);
@@ -1663,9 +1663,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             double sn=((double)r1.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.orange);
@@ -1713,9 +1713,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             double sn=((double)r1.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.orange);
@@ -1751,7 +1751,7 @@ public class Proje extends JFrame implements ActionListener{
                     g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY-10);
                     double sn=((double)r1.getHiz()/yerDegistirme);
-                    System.out.println("Geçen süre:"+sn+" saniye");
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             
@@ -1849,8 +1849,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                         g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1902,8 +1902,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                         g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -1956,8 +1956,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2009,8 +2009,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2052,7 +2052,7 @@ public class Proje extends JFrame implements ActionListener{
                     /*g.setColor(Color.red);
                     g.drawString("Son Konum",toplamX,toplamY-10);
                     sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                    System.out.println("Geçen süre:"+sn+" saniye");*/
+                    System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");*/
                 }
                 
             }
@@ -2070,8 +2070,8 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -2082,7 +2082,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             int as;
@@ -2134,9 +2134,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2167,9 +2167,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2200,9 +2200,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2232,9 +2232,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2267,7 +2267,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.setColor(Color.black);
                 g.fillOval(toplamX,toplamY,15,15);
                 sn+=(double)r3.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }
            
         }
@@ -2361,8 +2361,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                         g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn+=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2414,8 +2414,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                         g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn+=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2466,8 +2466,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn+=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2518,8 +2518,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn+=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -2573,8 +2573,8 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -2585,7 +2585,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX+5,toplamY+15,toplamX+5,toplamY+20);
                 g.drawLine(toplamX+10,toplamY+15,toplamX+10,toplamY+20);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             q=0;
@@ -2635,9 +2635,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2667,9 +2667,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2699,9 +2699,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2731,9 +2731,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -2766,7 +2766,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.setColor(Color.black);
                 g.fillOval(toplamX,toplamY,15,15);
                 sn+=(double)r3.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }
         }
         if(getRobotTipi().equalsIgnoreCase("spiderSeri"))
@@ -2849,7 +2849,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(oncekiKonumY<list1.get(i) && list1.get(i)<=toplamY)
                         {
                            sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                            g.setColor(Color.red);
                            g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                            g.setColor(Color.magenta);
@@ -2865,9 +2865,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.magenta);
@@ -2910,7 +2910,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(toplamY<=list1.get(i) && list1.get(i)<oncekiKonumY)
                         {
                            sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                            g.setColor(Color.red);
                            g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                            g.setColor(Color.orange);
@@ -2926,9 +2926,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.magenta);
@@ -2971,7 +2971,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(oncekiKonumX<list.get(i) && list.get(i)<=toplamX)
                         {
                            sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                            g.setColor(Color.red);
                            g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                            g.setColor(Color.magenta);
@@ -2987,9 +2987,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.magenta);
@@ -3031,7 +3031,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(toplamX<=list.get(i) && list.get(i)<oncekiKonumX)
                         {
                            sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                            g.setColor(Color.red);
                            g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                            g.setColor(Color.magenta);
@@ -3047,9 +3047,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                           System.out.println("Geçen süre:"+sn+" saniye");
+                           System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.magenta);
@@ -3102,8 +3102,8 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme);
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -3116,7 +3116,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme);
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             
@@ -3167,9 +3167,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3199,9 +3199,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3231,9 +3231,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3263,9 +3263,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3297,7 +3297,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.setColor(Color.black);
                 g.fillOval(toplamX,toplamY,15,15);
                 sn+=(double)r3.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }
            
             
@@ -3392,8 +3392,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                             g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3446,8 +3446,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(toplamX,oncekiKonumY,toplamX-10,oncekiKonumY+10);
                             g.drawLine(toplamX+15,oncekiKonumY,toplamX+25,oncekiKonumY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3499,8 +3499,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3551,8 +3551,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(oncekiKonumX,toplamY,oncekiKonumX-10,toplamY+10);
                             g.drawLine(oncekiKonumX+15,toplamY,oncekiKonumX+25,toplamY+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3607,8 +3607,8 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -3617,7 +3617,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX+5,toplamY+15,toplamX+5,toplamY+20);
                 g.drawLine(toplamX+10,toplamY+15,toplamX+10,toplamY+20);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             q=0;
@@ -3667,9 +3667,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3699,9 +3699,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3731,9 +3731,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3763,9 +3763,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -3797,7 +3797,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.setColor(Color.black);
                 g.fillOval(toplamX,toplamY,15,15);
                 sn+=(double)r2.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }            
         }
         if(getRobotTipi().equalsIgnoreCase("paletliParalel"))
@@ -3890,8 +3890,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(getX(),getY(),getX()-10,getY()+10);
                             g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3943,8 +3943,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(getX(),getY(),getX()-10,getY()+10);
                             g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -3995,8 +3995,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(getX(),getY(),getX()-10,getY()+10);
                             g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -4048,8 +4048,8 @@ public class Proje extends JFrame implements ActionListener{
                             g.drawLine(getX(),getY(),getX()-10,getY()+10);
                             g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                             sn=((double)r3.getHiz()/yerDegistirme2)+engelSure;
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             devam=false;
                         }
                     }
@@ -4103,8 +4103,8 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(getX(),getY(),getX()-10,getY()+10);
                 g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -4115,7 +4115,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(getX(),getY(),getX()-10,getY()+10);
                 g.drawLine(getX()+15,getY(),getX()+25,getY()+10);
                 sn=((double)r3.getHiz()/yerDegistirme)+engelSure;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             q=0;
@@ -4165,9 +4165,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4197,9 +4197,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4229,9 +4229,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4261,9 +4261,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4295,7 +4295,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.setColor(Color.black);
                 g.fillOval(toplamX,toplamY,15,15);
                 sn+=(double)r3.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }            
         }
         if(getRobotTipi().equalsIgnoreCase("spiderParalel"))
@@ -4376,7 +4376,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(oncekiKonumY<list1.get(i) && list1.get(i)<=toplamY)
                         {
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                            g.setColor(Color.magenta);
@@ -4392,9 +4392,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.magenta);
@@ -4437,7 +4437,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(toplamY<=list1.get(i) && list1.get(i)<oncekiKonumY)
                         {
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                            g.setColor(Color.magenta);
@@ -4453,9 +4453,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                             System.out.println("Geçen süre:"+sn+" saniye");
+                             System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",toplamX,oncekiKonumY-10);
                             g.setColor(Color.magenta);
@@ -4496,7 +4496,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(oncekiKonumX<list.get(i) && list.get(i)<=toplamX)
                         {
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                            g.setColor(Color.magenta);
@@ -4513,9 +4513,9 @@ public class Proje extends JFrame implements ActionListener{
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
                             
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.magenta);
@@ -4557,7 +4557,7 @@ public class Proje extends JFrame implements ActionListener{
                         if(toplamX<=list.get(i) && list.get(i)<oncekiKonumX)
                         {
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                            g.setColor(Color.red);
                            g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                            g.setColor(Color.magenta);
@@ -4573,9 +4573,9 @@ public class Proje extends JFrame implements ActionListener{
                     {
                         if(toplamX>=630 || toplamX<30 || toplamY>=650 || toplamY<50)
                         {
-                            System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                            System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                             sn=((double)r3.getHiz()/yerDegistirme2);
-                            System.out.println("Geçen süre:"+sn+" saniye");
+                            System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                             g.setColor(Color.red);
                             g.drawString("Son Konum",oncekiKonumX,toplamY-10);
                             g.setColor(Color.magenta);
@@ -4625,9 +4625,9 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX+5,toplamY+15,toplamX+5,toplamY+20);
                 g.drawLine(toplamX+10,toplamY+15,toplamX+10,toplamY+20);
                 
-                System.out.println(yonBilgisi+" gittikten sonra ýzgara dýþýna çýkar");
+                System.out.println(yonBilgisi+" gittikten sonra Ã½zgara dÃ½Ã¾Ã½na Ã§Ã½kar");
                 sn=((double)r3.getHiz()/yerDegistirme);
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
                 else
                 {
@@ -4638,7 +4638,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX+5,toplamY+15,toplamX+5,toplamY+20);
                 g.drawLine(toplamX+10,toplamY+15,toplamX+10,toplamY+20);
                 sn=((double)r3.getHiz()/yerDegistirme);
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                 }
             }
             q=0;
@@ -4688,9 +4688,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4720,9 +4720,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(toplamX,oncekiKonumY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4752,9 +4752,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4784,9 +4784,9 @@ public class Proje extends JFrame implements ActionListener{
                         g.setColor(Color.black);
                         g.fillOval(oncekiKonumX,toplamY,15,15);
                         devam=false;
-                        System.out.println(yonBilgisi2+" kol uzunluðunu aþmaktadýr");
+                        System.out.println(yonBilgisi2+" kol uzunluÃ°unu aÃ¾maktadÃ½r");
                         sn+=(double)r3.getTasimaHizi()/yerDegistirme2;
-                        System.out.println("Geçen süre:"+sn+" saniye");
+                        System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
                     }
                     else if(devam==true)
                     {
@@ -4820,7 +4820,7 @@ public class Proje extends JFrame implements ActionListener{
                 g.drawLine(toplamX,toplamY,toplamX-10,toplamY+10);
                 g.drawLine(toplamX+15,toplamY,toplamX+25,toplamY+10);
                 sn+=(double)r3.getTasimaHizi()/yerDegistirme;
-                System.out.println("Geçen süre:"+sn+" saniye");
+                System.out.println("GeÃ§en sÃ¼re:"+sn+" saniye");
             }            
         }
 
@@ -4837,7 +4837,7 @@ public class Proje extends JFrame implements ActionListener{
         // TODO code application logic here
         
         Scanner sc=new Scanner(System.in);
-        System.out.println("Tanýmlanacak robot sayýsý:");
+        System.out.println("TanÃ½mlanacak robot sayÃ½sÃ½:");
         int robotSayisi=sc.nextInt();
         String robotTipi;
         //String[] robotTipi12=new String[20];
@@ -4846,19 +4846,19 @@ public class Proje extends JFrame implements ActionListener{
         robotTipi=sc.nextLine();
         for(int i=0;i<robotSayisi;i++)
         {
-            System.out.println("Tanýmlanacak robot tipi:");
+            System.out.println("TanÃ½mlanacak robot tipi:");
             robotTipi=sc.nextLine();
             tip.add(robotTipi);
             
         }
-        int motorSayisi,yükMiktari;
+        int motorSayisi,yÃ¼kMiktari;
         int m,k=0;
         m=0;
         boolean s=true;
         int hizSeri=10;
         int hizParalel=20;
-        int yükSeri=5;
-        int yükParalel=10;
+        int yÃ¼kSeri=5;
+        int yÃ¼kParalel=10;
         int hizTekerlekli=30;
         int hizPaletli=20;
         int hizSpider=10;
@@ -4874,15 +4874,15 @@ public class Proje extends JFrame implements ActionListener{
         Hibrit h5=new Hibrit();
         Hibrit h6=new Hibrit();
         Robot[] robot=new Robot[robotSayisi];
-        int hiz1,hiz2,hiz3,tekerlekSayisi,paletSayisi,bacakSayisi,tasimaHizi1,yükTasimaKapasitesi1,kolUzunlugu1,tasimaHizi2,yükTasimaKapasitesi2,kolUzunlugu2;
+        int hiz1,hiz2,hiz3,tekerlekSayisi,paletSayisi,bacakSayisi,tasimaHizi1,yÃ¼kTasimaKapasitesi1,kolUzunlugu1,tasimaHizi2,yÃ¼kTasimaKapasitesi2,kolUzunlugu2;
         while(m<robotSayisi){
             robotTipi=tip.get(m).toString();
         if(robotTipi.contains("gezgin"))
         {  
-            System.out.println("Gezgin robot türünü seçiniz:"+m);
-            System.out.println("Tekerlekli için 1");
-            System.out.println("Paletli için 2");
-            System.out.println("Spider için 3");
+            System.out.println("Gezgin robot tÃ¼rÃ¼nÃ¼ seÃ§iniz:"+m);
+            System.out.println("Tekerlekli iÃ§in 1");
+            System.out.println("Paletli iÃ§in 2");
+            System.out.println("Spider iÃ§in 3");
             int secim=sc.nextInt();
             String str;
             int cevap;
@@ -4895,63 +4895,63 @@ public class Proje extends JFrame implements ActionListener{
                 case 1:
                     robotTipi1.add("tekerlekli");
                     robotTipi="tekerlekli";
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Tekerli robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Tekerli robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         tekerlekSayisi=sc.nextInt();
-                        System.out.println("Tekerlekli robotun hýzýný giriniz:");
+                        System.out.println("Tekerlekli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz1=sc.nextInt();
                     }while(hiz1<hizTekerlekli);
-                    g1=new Tekerlekli(motorSayisi, yükMiktari, robotTipi, hiz1, tekerlekSayisi);
+                    g1=new Tekerlekli(motorSayisi, yÃ¼kMiktari, robotTipi, hiz1, tekerlekSayisi);
                     
                     break;
                 case 2:
                    robotTipi="paletli";
                    robotTipi1.add("paletli");
-                   System.out.println("Motor sayýsýný giriniz:");
+                   System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Paletli robotun palet sayýsýný giriniz:");
+                        System.out.println("Paletli robotun palet sayÃ½sÃ½nÃ½ giriniz:");
                         paletSayisi=sc.nextInt();
-                        System.out.println("Paletli robotun hýzýný giriniz:");
+                        System.out.println("Paletli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz2=sc.nextInt();
                     }while(hiz2<hizPaletli);
-                    g2=new Paletli(motorSayisi, yükMiktari, robotTipi, hiz2, paletSayisi);
+                    g2=new Paletli(motorSayisi, yÃ¼kMiktari, robotTipi, hiz2, paletSayisi);
                     
                     break;
                 case 3:
                     robotTipi="spider";
                     robotTipi1.add("spider");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Spider robotun bacak sayýsýný giriniz:");
+                        System.out.println("Spider robotun bacak sayÃ½sÃ½nÃ½ giriniz:");
                         bacakSayisi=sc.nextInt();
-                        System.out.println("Spider robotun hýzýný giriniz:");
+                        System.out.println("Spider robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz3=sc.nextInt(); 
                     }while(hiz3<hizSpider);
-                    g3=new Spider(motorSayisi, yükMiktari, robotTipi, hiz3, bacakSayisi);
+                    g3=new Spider(motorSayisi, yÃ¼kMiktari, robotTipi, hiz3, bacakSayisi);
                     
                     break;
                     
             }
         }
-        else if(robotTipi.equalsIgnoreCase("manipülatör robot") ||  robotTipi.equalsIgnoreCase("gezmeyen"))
+        else if(robotTipi.equalsIgnoreCase("manipÃ¼latÃ¶r robot") ||  robotTipi.equalsIgnoreCase("gezmeyen"))
         {
             
-            System.out.println("Manipülatör robot türünü seçiniz:");
-            System.out.println("Seri için 1");
-            System.out.println("Paralel için 2");
+            System.out.println("ManipÃ¼latÃ¶r robot tÃ¼rÃ¼nÃ¼ seÃ§iniz:");
+            System.out.println("Seri iÃ§in 1");
+            System.out.println("Paralel iÃ§in 2");
             int secim=sc.nextInt();
             
             ArrayList <String> yonBilgisi=new ArrayList <String>();
@@ -4961,65 +4961,65 @@ public class Proje extends JFrame implements ActionListener{
                 case 1:
                     robotTipi="seri";
                     robotTipi1.add("seri");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Seri robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi1=sc.nextInt();
-                        System.out.println("Seri robotun taþýma hýzýný giriniz:");
+                        System.out.println("Seri robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi1=sc.nextInt();
+                        System.out.println("Seri robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi1=sc.nextInt();
-                        System.out.println("Seri robotun kol uzunluðunu giriniz:");
+                        System.out.println("Seri robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu1=sc.nextInt();
-                    }while(tasimaHizi1<hizSeri && yükTasimaKapasitesi1<yükSeri);
-                    while(yükMiktari>yükTasimaKapasitesi1)
+                    }while(tasimaHizi1<hizSeri && yÃ¼kTasimaKapasitesi1<yÃ¼kSeri);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi1)
                     {
-                        System.out.println("Seri robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Seri robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    m1=new Seri(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1);
+                    m1=new Seri(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1);
                     
                     break;
                 case 2:
                     robotTipi="paralel";
                     robotTipi1.add("paralel");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Paralel robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi2=sc.nextInt();
-                        System.out.println("Paralel robotun taþýma hýzýný giriniz:");
+                        System.out.println("Paralel robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi2=sc.nextInt();
+                        System.out.println("Paralel robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi2=sc.nextInt();
-                        System.out.println("Paralel robotun kol uzunluðunu giriniz:");
+                        System.out.println("Paralel robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu2=sc.nextInt();
-                    }while(tasimaHizi2<hizParalel && yükTasimaKapasitesi2<yükParalel);
-                    while(yükMiktari>yükTasimaKapasitesi2)
+                    }while(tasimaHizi2<hizParalel && yÃ¼kTasimaKapasitesi2<yÃ¼kParalel);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi2)
                     {
-                        System.out.println("Seri robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Seri robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    m2=new Paralel(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2);
+                    m2=new Paralel(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2);
                     
                     break;
                     
                     
             }
         }
-        else if(robotTipi.contains("hibrit") || robotTipi.contains("gezgin manipülatör"))
+        else if(robotTipi.contains("hibrit") || robotTipi.contains("gezgin manipÃ¼latÃ¶r"))
         {
             
-            System.out.println("Kullanýlacak robot tipini seçiniz:");
-            System.out.println("Tekerlekli seri için 1");
-            System.out.println("Paletli seri için 2");
-            System.out.println("Spider seri için 3");
-            System.out.println("Tekerlekli paralel için 4");
-            System.out.println("Paletli paralel için 5");
-            System.out.println("Spider paralel için 6");
+            System.out.println("KullanÃ½lacak robot tipini seÃ§iniz:");
+            System.out.println("Tekerlekli seri iÃ§in 1");
+            System.out.println("Paletli seri iÃ§in 2");
+            System.out.println("Spider seri iÃ§in 3");
+            System.out.println("Tekerlekli paralel iÃ§in 4");
+            System.out.println("Paletli paralel iÃ§in 5");
+            System.out.println("Spider paralel iÃ§in 6");
             int secim=sc.nextInt();
             String str1,str2;
             int cevap;
@@ -5033,172 +5033,172 @@ public class Proje extends JFrame implements ActionListener{
                 case 1:
                     robotTipi="tekerlekliSeri";
                     robotTipi1.add("tekerlekliSeri");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Tekerli robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Tekerli robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         tekerlekSayisi=sc.nextInt();
-                        System.out.println("Tekerlekli robotun hýzýný giriniz:");
+                        System.out.println("Tekerlekli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz1=sc.nextInt();
-                        System.out.println("Seri robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi1=sc.nextInt();
-                        System.out.println("Seri robotun taþýma hýzýný giriniz:");
+                        System.out.println("Seri robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi1=sc.nextInt();
+                        System.out.println("Seri robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi1=sc.nextInt();
-                        System.out.println("Seri robotun kol uzunluðunu giriniz:");
+                        System.out.println("Seri robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu1=sc.nextInt();
-                    }while(hiz1<hizTekerlekli && tasimaHizi1<hizSeri && yükTasimaKapasitesi1<yükSeri);
-                    while(yükMiktari>yükTasimaKapasitesi1)
+                    }while(hiz1<hizTekerlekli && tasimaHizi1<hizSeri && yÃ¼kTasimaKapasitesi1<yÃ¼kSeri);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi1)
                     {
-                        System.out.println("Seri robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Seri robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h1=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz1);
+                    h1=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz1);
                    
                     break;
                     
                  case 2:
                     robotTipi="paletliSeri";
                      robotTipi1.add("paletliSeri");
-                     System.out.println("Motor sayýsýný giriniz:");
+                     System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Paletli robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Paletli robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         paletSayisi=sc.nextInt();
-                        System.out.println("Paletli robotun hýzýný giriniz:");
+                        System.out.println("Paletli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz2=sc.nextInt();
-                        System.out.println("Seri robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi1=sc.nextInt();
-                        System.out.println("Seri robotun taþýma hýzýný giriniz:");
+                        System.out.println("Seri robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi1=sc.nextInt();
+                        System.out.println("Seri robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi1=sc.nextInt();
-                        System.out.println("Seri robotun kol uzunluðunu giriniz:");
+                        System.out.println("Seri robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu1=sc.nextInt();
-                    }while(hiz2<hizPaletli && tasimaHizi1<hizSeri && yükTasimaKapasitesi1<yükSeri);
-                    while(yükMiktari>yükTasimaKapasitesi1)
+                    }while(hiz2<hizPaletli && tasimaHizi1<hizSeri && yÃ¼kTasimaKapasitesi1<yÃ¼kSeri);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi1)
                     {
-                        System.out.println("Seri robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Seri robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h2=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz2);
+                    h2=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz2);
                     break;
                     
                 case 3:
                     robotTipi="spiderSeri";
                     robotTipi1.add("spiderSeri");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Spider robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Spider robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         bacakSayisi=sc.nextInt();
-                        System.out.println("Spider robotun hýzýný giriniz:");
+                        System.out.println("Spider robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz3=sc.nextInt();
-                        System.out.println("Seri robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi1=sc.nextInt();
-                        System.out.println("Seri robotun taþýma hýzýný giriniz:");
+                        System.out.println("Seri robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi1=sc.nextInt();
+                        System.out.println("Seri robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi1=sc.nextInt();
-                        System.out.println("Seri robotun kol uzunluðunu giriniz:");
+                        System.out.println("Seri robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu1=sc.nextInt();
-                    }while(hiz3<hizSpider && tasimaHizi1<hizSeri && yükTasimaKapasitesi1<yükSeri);
-                    while(yükMiktari>yükTasimaKapasitesi1)
+                    }while(hiz3<hizSpider && tasimaHizi1<hizSeri && yÃ¼kTasimaKapasitesi1<yÃ¼kSeri);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi1)
                     {
-                        System.out.println("Seri robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Seri robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h3=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz3);
+                    h3=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi1, kolUzunlugu1, tasimaHizi1, hiz3);
                     break;
                     
                 case 4:
                     robotTipi="tekerlekliParalel";
                     robotTipi1.add("tekerlekliParalel");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Tekerli robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Tekerli robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         tekerlekSayisi=sc.nextInt();
-                        System.out.println("Tekerlekli robotun hýzýný giriniz:");
+                        System.out.println("Tekerlekli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz1=sc.nextInt();
-                        System.out.println("Paralel robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi2=sc.nextInt();
-                        System.out.println("Paralel robotun taþýma hýzýný giriniz:");
+                        System.out.println("Paralel robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi2=sc.nextInt();
+                        System.out.println("Paralel robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi2=sc.nextInt();
-                        System.out.println("Paralel robotun kol uzunluðunu giriniz:");
+                        System.out.println("Paralel robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu2=sc.nextInt();
-                    }while(hiz1<hizTekerlekli && tasimaHizi2<hizParalel && yükTasimaKapasitesi2<yükParalel);
-                    while(yükMiktari>yükTasimaKapasitesi2)
+                    }while(hiz1<hizTekerlekli && tasimaHizi2<hizParalel && yÃ¼kTasimaKapasitesi2<yÃ¼kParalel);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi2)
                     {
-                        System.out.println("Paralel robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Paralel robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h4=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz1);
+                    h4=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz1);
                     
                     break;
                     
                 case 5:
                     robotTipi="paletliParalel";
                     robotTipi1.add("paletliParalel");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Paletli robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Paletli robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         paletSayisi=sc.nextInt();
-                        System.out.println("Paletli robotun hýzýný giriniz:");
+                        System.out.println("Paletli robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz2=sc.nextInt();
-                        System.out.println("Paralel robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi2=sc.nextInt();
-                        System.out.println("Paralel robotun taþýma hýzýný giriniz:");
+                        System.out.println("Paralel robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi2=sc.nextInt();
+                        System.out.println("Paralel robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi2=sc.nextInt();
-                        System.out.println("Paralel robotun kol uzunluðunu giriniz:");
+                        System.out.println("Paralel robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu2=sc.nextInt();
-                    }while(hiz2<hizPaletli && tasimaHizi2<hizParalel && yükTasimaKapasitesi2<yükParalel);
-                    while(yükMiktari>yükTasimaKapasitesi2)
+                    }while(hiz2<hizPaletli && tasimaHizi2<hizParalel && yÃ¼kTasimaKapasitesi2<yÃ¼kParalel);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi2)
                     {
-                        System.out.println("Paralel robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Paralel robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h5=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz2);
+                    h5=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz2);
                     
                     break;
                     
                 case 6:
                     robotTipi="spiderParalel";
                     robotTipi1.add("spiderParalel");
-                    System.out.println("Motor sayýsýný giriniz:");
+                    System.out.println("Motor sayÃ½sÃ½nÃ½ giriniz:");
                     motorSayisi=sc.nextInt();
-                    System.out.println("Yük miktarini giriniz:");
-                    yükMiktari=sc.nextInt();
+                    System.out.println("YÃ¼k miktarini giriniz:");
+                    yÃ¼kMiktari=sc.nextInt();
                     do
                     {
-                        System.out.println("Spider robotun tekerlek sayýsýný giriniz:");
+                        System.out.println("Spider robotun tekerlek sayÃ½sÃ½nÃ½ giriniz:");
                         bacakSayisi=sc.nextInt();
-                        System.out.println("Spider robotun hýzýný giriniz:");
+                        System.out.println("Spider robotun hÃ½zÃ½nÃ½ giriniz:");
                         hiz3=sc.nextInt();
-                        System.out.println("Paralel robotun yük taþýma kapasitesini giriniz:");
-                        yükTasimaKapasitesi2=sc.nextInt();
-                        System.out.println("Paralel robotun taþýma hýzýný giriniz:");
+                        System.out.println("Paralel robotun yÃ¼k taÃ¾Ã½ma kapasitesini giriniz:");
+                        yÃ¼kTasimaKapasitesi2=sc.nextInt();
+                        System.out.println("Paralel robotun taÃ¾Ã½ma hÃ½zÃ½nÃ½ giriniz:");
                         tasimaHizi2=sc.nextInt();
-                        System.out.println("Paralel robotun kol uzunluðunu giriniz:");
+                        System.out.println("Paralel robotun kol uzunluÃ°unu giriniz:");
                         kolUzunlugu2=sc.nextInt();
-                    }while(hiz3<hizSpider && tasimaHizi2<hizParalel && yükTasimaKapasitesi2<yükParalel);
-                    while(yükMiktari>yükTasimaKapasitesi2)
+                    }while(hiz3<hizSpider && tasimaHizi2<hizParalel && yÃ¼kTasimaKapasitesi2<yÃ¼kParalel);
+                    while(yÃ¼kMiktari>yÃ¼kTasimaKapasitesi2)
                     {
-                        System.out.println("Paralel robotun yük miktarýný giriniz:");
-                        yükMiktari=sc.nextInt();
+                        System.out.println("Paralel robotun yÃ¼k miktarÃ½nÃ½ giriniz:");
+                        yÃ¼kMiktari=sc.nextInt();
                     }
-                    h6=new Hibrit(motorSayisi, yükMiktari, robotTipi, yükTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz3);
+                    h6=new Hibrit(motorSayisi, yÃ¼kMiktari, robotTipi, yÃ¼kTasimaKapasitesi2, kolUzunlugu2, tasimaHizi2, hiz3);
                     
                     break;
                     
@@ -5211,7 +5211,7 @@ public class Proje extends JFrame implements ActionListener{
 }
       
         m=0;
-        System.out.println("Hangi sýradaki robot hareket ettirilecek:");
+        System.out.println("Hangi sÃ½radaki robot hareket ettirilecek:");
         int sira=sc.nextInt();
         int cevap,engelSayisi=0;
         int[] konumX=new int[20];
@@ -5223,7 +5223,7 @@ public class Proje extends JFrame implements ActionListener{
         ArrayList <String> yonBilgisi2=new ArrayList <String>();
         if(robotTipi1.get((sira-1)).contains("tekerlekli"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5236,11 +5236,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Tekerlekli robotun yön bilgisini giriniz:");
+                    System.out.println("Tekerlekli robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5254,7 +5254,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("paletli"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5267,11 +5267,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                      i=0;
-                    System.out.println("Paletli robotun yön bilgisini giriniz:");
+                    System.out.println("Paletli robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5285,7 +5285,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("spider"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5298,11 +5298,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                      i=0;
-                    System.out.println("Spider robotun yön bilgisini giriniz:");
+                    System.out.println("Spider robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5312,19 +5312,19 @@ public class Proje extends JFrame implements ActionListener{
                     }
                     
                     
-                    //Spider r3=new Spider(motorSayisi,yükMiktari,robotTipi,hiz3,bacakSayisi);
+                    //Spider r3=new Spider(motorSayisi,yÃ¼kMiktari,robotTipi,hiz3,bacakSayisi);
                     Proje g=new Proje(x, y,engelSayisi, konumX, konumY, robotTipi, yonBilgisi,g3);
             }
           
         
         else if(robotTipi1.get((sira-1)).contains("seri"))
         {
-            System.out.println("Baþlangýç noktasýný giriniz:");
+            System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
               
                     i=0;
-                    System.out.println("Seri robotun yön bilgisini giriniz:");
+                    System.out.println("Seri robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5337,12 +5337,12 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("paralel"))
         {
-            System.out.println("Baþlangýç noktasýný giriniz:");
+            System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                      x=sc.nextInt();
                      y=sc.nextInt();
                     
                     i=0;
-                    System.out.println("Paralel robotun yön bilgisini giriniz:");
+                    System.out.println("Paralel robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5354,7 +5354,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("tekerlekliSeri"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5367,11 +5367,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Tekerlekli robotun yön bilgisini giriniz:");
+                    System.out.println("Tekerlekli robotun yÃ¶n bilgisini giriniz:");
                     boolean d=true;
                     while(d)
                     {
@@ -5382,7 +5382,7 @@ public class Proje extends JFrame implements ActionListener{
                     }
                     i=0;
                     d=true;
-                    System.out.println("Seri robotun yön bilgisini giriniz:");
+                    System.out.println("Seri robotun yÃ¶n bilgisini giriniz:");
                     while(d)
                     {
                         
@@ -5395,7 +5395,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("paletliSeri"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5408,11 +5408,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Paletli robotun yön bilgisini giriniz:");
+                    System.out.println("Paletli robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5421,7 +5421,7 @@ public class Proje extends JFrame implements ActionListener{
                         i++;
                     }
                     i=0;
-                    System.out.println("Seri robotun yön bilgisini giriniz:");
+                    System.out.println("Seri robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5434,7 +5434,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("spiderSeri"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5447,11 +5447,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Spider robotun yön bilgisini giriniz:");
+                    System.out.println("Spider robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5460,7 +5460,7 @@ public class Proje extends JFrame implements ActionListener{
                         i++;
                     }
                     i=0;
-                    System.out.println("Seri robotun yön bilgisini giriniz:");
+                    System.out.println("Seri robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5473,7 +5473,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("tekerlekliParalel"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5486,11 +5486,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Tekerlekli robotun yön bilgisini giriniz:");
+                    System.out.println("Tekerlekli robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5500,7 +5500,7 @@ public class Proje extends JFrame implements ActionListener{
                     }
                     
                     i=0;
-                    System.out.println("Paralel robotun yön bilgisini giriniz:");
+                    System.out.println("Paralel robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5513,7 +5513,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("paletliParalel"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5526,11 +5526,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Paletli robotun yön bilgisini giriniz:");
+                    System.out.println("Paletli robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5540,7 +5540,7 @@ public class Proje extends JFrame implements ActionListener{
                     }
                     
                     i=0;
-                    System.out.println("Paralel robotun yön bilgisini giriniz:");
+                    System.out.println("Paralel robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5553,7 +5553,7 @@ public class Proje extends JFrame implements ActionListener{
         }
         else if(robotTipi1.get((sira-1)).contains("spiderParalel"))
         {
-            System.out.println("Engel yerleþtirmek istiyor musunuz?(evet:1 / hayýr:2");
+            System.out.println("Engel yerleÃ¾tirmek istiyor musunuz?(evet:1 / hayÃ½r:2");
                     cevap=sc.nextInt();
                     if(cevap==1)
                     {
@@ -5566,11 +5566,11 @@ public class Proje extends JFrame implements ActionListener{
                             konumY[i]=sc.nextInt();
                         }
                     }
-                    System.out.println("Baþlangýç noktasýný giriniz:");
+                    System.out.println("BaÃ¾langÃ½Ã§ noktasÃ½nÃ½ giriniz:");
                     x=sc.nextInt();
                     y=sc.nextInt();
                     i=0;
-                    System.out.println("Spider  robotun yön bilgisini giriniz:");
+                    System.out.println("Spider  robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
@@ -5580,7 +5580,7 @@ public class Proje extends JFrame implements ActionListener{
                     }
                     
                     i=0;
-                    System.out.println("Paralel robotun yön bilgisini giriniz:");
+                    System.out.println("Paralel robotun yÃ¶n bilgisini giriniz:");
                     while(i<2)
                     {
                         
